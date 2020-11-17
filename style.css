@@ -1,0 +1,93 @@
+html {
+	font-size: 62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: linear-gradient(30deg, rgba(137, 255, 190, .5), rgba(210, 249, 252, .5));
+}
+section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	width: 1100px;
+}
+.card {
+	position: relative;
+	width: 32rem;
+	height: 32rem;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	perspective: 1000px;
+	cursor: pointer;
+}
+.box {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	transition: all 1s ease;
+}
+.imgBox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.imgBox img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+.contentBx {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #333;
+	backface-visibility: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	transform: rotateY(180deg);
+}
+
+.bg {
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	transform: translateZ(10rem);
+	width: 23.5rem;
+	height: 35rem;
+
+	background-image: url('./medhat.jpg');
+	background-size: cover;
+	opacity: .5;
+	transition: all .5s ease-in-out;
+}
+.card:hover .box {
+	transform: rotateY(180deg);
+}
+.card:hover .bg {
+	opacity: 1;
+}
